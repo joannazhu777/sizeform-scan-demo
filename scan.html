@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Fit Passport — Scanning</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Simple modal backdrop */
+    #completeModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    #completeModal .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      max-width: 400px;
+      text-align: center;
+      color: #333;
+    }
+    #completeModal button {
+      margin: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header><div class="logo">Sizeform</div></header>
+
+  <section style="padding:2rem; text-align:center;">
+    <h2 style="color:#0B6E4F; font-size:2rem;">Scanning Your Body</h2>
+    <div
+      id="scanPlaceholder"
+      style="position:relative; width:100%; max-width:600px; height:400px; margin:1.5rem auto; background:#80727B; border-radius:0.5rem; overflow:hidden;">
+    </div>
+  </section>
+
+  <!-- COMPLETE MODAL -->
+  <div id="completeModal">
+    <div class="modal-content">
+      <h3 style="font-size:1.25rem; margin-bottom:1rem;">Scan complete!</h3>
+      <p style="margin-bottom:1.5rem;">
+        Do you want to <strong>permanently delete</strong> the videos we just took?
+      </p>
+      <button id="deleteVideos" class="btn-scan" style="background:#0B6E4F;">
+        Yes, please!
+      </button>
+      <button id="keepVideos" class="btn-scan" style="background:#80727B;color:#fff;">
+        I don't mind
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
